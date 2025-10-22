@@ -1,7 +1,7 @@
 <h1>ExpNo 9: Solve Wumpus World Problem using Python demonstrating Inferences from Propositional Logic</h1> 
-<h3>Name: Lokesh M </h3>
-<h3>Register Number: 212223230114 </h3>
-<H3>Aim:</H3>
+<h3>Name : Lokesh M </h3>
+<h3>Register Number : 212223230114</h3>
+<h1>Aim:</h1>
 <p>
     To solve  Wumpus World Problem using Python demonstrating Inferences from Propositional Logic
 </p>
@@ -22,22 +22,18 @@ This is a python program that uses propositional logic sentences to check which 
 It is assumed that there will always be a safe path that the agent can take to exit the Wumpus world. The logical agent can take four actions: Up, Down, Left and Right. These actions help the agent move from one room to an adjacent room. The agent can perceive two things: Breeze and Stench.
 </p>
 
-<hr>
+# Program:
+```
 
-<h1>Program : </h2>
-
-<pre><code>
 wumpus=[["Save","Breeze","PIT","Breeze"],
         ["Smell","Save","Breeze","Save"],
         ["WUMPUS","GOLD","PIT","Breeze"],
         ["Smell","Save","Breeze","PIT"]]
-
-row = 0
-column = 0
-arrow = True
-player = True
-score = 0
-
+row=0
+column=0
+arrow=True
+player=True
+score=0
 while(player):
     choice=input("press u to move up\npress d to move down\npress l to move left\npress r to move right\n")
     if choice == "u":
@@ -45,28 +41,28 @@ while(player):
             row-=1
         else:
             print("move denied")
-
+        
         print("current location: ",wumpus[row][column],"\n")
     elif choice == "d" :
         if row!=3:
             row+=1
         else:
             print("move denied")
-
+        
         print("current location: ",wumpus[row][column],"\n")
     elif choice == "l" :
         if column!=0:
             column-=1
         else:
             print("move denied")
-
+        
         print("current location: ",wumpus[row][column],"\n")
     elif choice == "r" :
         if column!=3:
             column+=1
         else:
             print("move denied")
-
+        
         print("current location: ",wumpus[row][column],"\n")
     else:
         print("move denied")
@@ -123,36 +119,32 @@ while(player):
                     print("arrow wasted...")
                     score-=10
                     print("score: ",score)
-
-
+                
+            
             arrow=False
     if wumpus[row][column] == "WUMPUS" :
         score-=1000
         print("\nWumpus here!!\n You Die\nAnd your score is: ",score
               ,"\n")
         break
-    if wumpus[row][column] == "GOLD":
-        score += 1000
-        print("You found the GOLD!\nYou Win!\nYour score is: ", score, "\n")
+    if(wumpus[row][column]=='GOLD'):
+        score+=1000
+        print("GOLD FOUND!You won....\nYour score is: ",score,"\n")
         break
     if(wumpus[row][column]=='PIT'):
         score-=1000
         print("Ahhhhh!!!!\nYou fell in pit.\nAnd your score is: ",score,"\n")
         break
-</code></pre>
-
-<img src="image.png" alt="prog">
-
+```
+<hr>
 <h1>Sample Input and Output:</h1>
 <hr>
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/8696111a-a4a7-47cb-ba4b-43a4ef88573f)
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/4be5bf06-79fa-4fa0-9334-38a33f06060b)
 
+# Output:
+![image](https://github.com/user-attachments/assets/21e32278-5b78-4c1c-bfe3-84ed2c924e34)
 
-<h1>Output : </h1>
-
-<img src="image-1.png" alt="out">
-
-<h1>Result :</h1>
+# Result:
 Therefore, Wumpus World Problem using Python demonstrating Inferences from Propositional Logic solved successfully.
